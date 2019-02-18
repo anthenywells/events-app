@@ -1,0 +1,7 @@
+<input type="text" placeholder="keyword" ng-model="$ctrl.keyword">
+<button ng-click="$ctrl.search($ctrl.keyword);">Search Keyword</button>
+
+<section ng-repeat="post in $ctrl.posts">
+  <p>Name: {{ post.name}}</p>
+  <p>Title: {{ post.eventUrl }}</p>
+</section>
