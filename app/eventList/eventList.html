@@ -3,7 +3,10 @@
   <p>Name: {{ post.name}}</p>
   <p>Date: {{post.dates.start.localDate}}</p>
   <p>{{post._embedded.venues[0].name}}</p>
+  <p>{{post.ticketLimit.info}} </p>
   <p>Tickets: <a href="{{ post.url }}">Link</a></p>
   <img src="{{post.images[7].url}}" width="400px">
+
+  
 </section>
 

@@ -1,10 +1,10 @@
-<input type="text" placeholder="keyword" ng-model="$ctrl.keyword">
-<input type="text" placeholder="city" ng-model="$ctrl.city">
+<input type="text" placeholder="keyword" ng-model="$ctrl.searchQuery.keyword">
+<input type="text" placeholder="city" ng-model="$ctrl.searchQuery.city">
 
-<!-- <input type="date" ng-model="startDate">
-<input type="date" ng-model="endDate"> -->
+<input type="date" ng-model="$ctrl.searchQuery.startDate">
+<input type="date" ng-model="$ctrl.searchQuery.endDate">
 
-<button ng-click="$ctrl.search($ctrl.keyword, $ctrl.city);">Search Events</button>
+<button ng-click="$ctrl.search($ctrl.searchQuery);">Search Events</button>
 
 <event-list
   posts="$ctrl.posts">
