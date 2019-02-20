@@ -113,6 +113,13 @@ body {
   color: #ffcb05;
 }
 
+.eventDetails{
+  display: none;
+}
+/* .bucketDetails{
+position: absolute;
+} */
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
   .events {
