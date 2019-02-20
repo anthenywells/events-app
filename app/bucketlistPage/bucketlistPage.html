@@ -1,6 +1,15 @@
-<p>Hello</p>
-<p ng-if="!$ctrl.favorites">You have no favorites</p>
-<div ng-repeat="item in $ctrl.favorites"><p>{{item.name}}</p><button ng-click="$ctrl.removeFavorite($index)">Delete</button></div>
+<!-- <div class="nofavs" ng-if="{$ctrl.favorites: 0}">You have no favorites</div> -->
 
-
-
+<div class="events">
+    <section ng-repeat="item in $ctrl.favorites" class="event">
+     <div class="details">
+      <p>{{ post.name}}</p>
+      <p>{{post.dates.start.localDate}}</p>
+     </div>
+      <img src="{{item.images[7].url}}" width="400px">
+      <a ng-click="$ctrl.removeFavorite($index)">
+        <i class="far fa-star"></i>
+      </a>
+    </section>
+  </div>
+  

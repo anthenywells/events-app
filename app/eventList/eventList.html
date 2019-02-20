@@ -6,6 +6,8 @@
     <p>{{post.dates.start.localDate}}</p>
    </div>
     <img src="{{post.images[7].url}}" width="400px">
-    <i class="far fa-star"></i>
+    <a ng-click="$ctrl.saveFavorite(post)">
+      <i class="far fa-star"></i>
+    </a>
   </section>
 </div>

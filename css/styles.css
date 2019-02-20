@@ -89,6 +89,11 @@ body {
   margin: 20px;
   box-shadow: 2px 2px 10px #000000;
 }
+.nofavs {
+  margin-top: 50px;
+  font-size: 3em;
+  color:#fff;
+}
 .details {
   width: 300px;
   position: absolute;
