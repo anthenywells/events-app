@@ -10,7 +10,7 @@ angular
         template: "<event-list></event-list>"
       })
       .when("/favorites", {
-        template: "<bucketlist-page></bucketlist-page>"
+        template: "<bucket-list></bucket-list>"
       })
       .when("/",{
         template: "<search-criteria></search-criteria>"
