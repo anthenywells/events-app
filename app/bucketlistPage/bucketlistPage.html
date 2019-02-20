@@ -1,4 +1,6 @@
-
+<p>Hello</p>
+<p ng-if="!$ctrl.favorites">You have no favorites</p>
+<div ng-repeat="item in $ctrl.favorites"><p>{{item.name}}</p><button ng-click="$ctrl.removeFavorite($index)">Delete</button></div>
 
 
 
