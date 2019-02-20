@@ -1,7 +1,7 @@
 "use strict";
 const searchCriteria = {
   templateUrl: "app/searchCriteria/searchCriteria.html",
-  controller: ["EventFactory", function(EventFactory) {
+  controller: ["EventService", function(EventService) {
     const vm = this;
     vm.searchQuery = {
       keyword: "",
@@ -10,9 +10,12 @@ const searchCriteria = {
       endDate: ""
     }
     vm.search = (searchQuery) => {
-      console.log(searchQuery);
-      EventFactory.searchTM(searchQuery).then((data) => {
-        console.log(data);
+      let start = searchQuery.startDate.toISOString();
+      searchQuery.startDate = start.split("").splice(0, start.length - 5).join("");
+      let end = searchQuery.endDate.toISOString();
+      searchQuery.endDate = end.split("").splice(0, end.length - 5).join("");
+      console.log(vm.searchQuery.startDate)
+      EventService.searchTM(searchQuery).then((data) => {
         vm.posts = data.data._embedded.events;
 
       });
