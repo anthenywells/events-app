@@ -9,5 +9,13 @@
     <a ng-click="$ctrl.saveFavorite(post)">
       <i class="far fa-star"></i>
     </a>
+
+    <div class="eventDetails">
+      <p>{{ post.name}}</p>
+      <p>{{post.venue[0]}}</p>
+      <p>{{post.dates.start.localDate}}</p>
+      <p>{{post.ticketLimit.info}}</p>
+      <p><a href="">{{post.url}}</a>Get Your Tickets Now!</p>
+    </div>
   </section>
 </div>
