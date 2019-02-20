@@ -1,14 +1,11 @@
 
-
-<section ng-repeat="post in $ctrl.posts">
-  <p>Name: {{ post.name}}</p>
-  <p>Date: {{post.dates.start.localDate}}</p>
-  <p>{{post._embedded.venues[0].name}}</p>
-  <p>{{post.ticketLimit.info}} </p>
-  <p>Tickets: <a href="{{ post.url }}">Link</a></p>
-  <img src="{{post.images[7].url}}" width="400px">
-  <button ng-click="$ctrl.saveFavorite(post)">Save Event</button>
-
-  
-</section>
-
+<div class="events">
+  <section ng-repeat="post in $ctrl.posts" class="event">
+   <div class="details">
+    <p>{{ post.name}}</p>
+    <p>{{post.dates.start.localDate}}</p>
+   </div>
+    <img src="{{post.images[7].url}}" width="400px">
+    <i class="far fa-star"></i>
+  </section>
+</div>
