@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Montserrat');
+
+body {
+  margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: #262626;
+  background-image: 
+  linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0, .5)),
+  /* Photo by Edwin Andrade on Unsplash */
+  url("/assets/images/fans.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* navigation */
+#header {
+  top: 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#2948ff;
+  padding: 10px;
+}
+#header a {
+  color: #fff;
+  padding:5px 15px;
+  text-decoration: none;
+}
+#logo{
+  font-family: 'Bungee Inline',cursive;
+  font-size: 1.5em;
+}
+.navbar {
+  display: flex;
+  margin-right: 20px;
+  font-size: 1.2em;
+}
+/* search criteria */
+.search {
+  margin-top: 100px;
+}
+.inputs {
+  border: 1px solid #bbb;
+}
+
+::placeholder {
+  color: #aaa;
+}
+*:focus {
+  outline: none;
+}
+.inputs, .searchbutton {
+  border-radius: 5px;
+  padding:10px;
+  margin-top: 10px;
+  font-size: .8em;
+}
+.searchbutton {
+  background-color: #2948ff;
+  border: #000;
+  color: #fff;
+}
+/* events */
+.events {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
+}
+.event {
+  position: relative;
+  width: 335px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+.details {
+  position: absolute;
+  left:25px;
+  color: #fff;
+  text-shadow: 2px 2px 1px #000000;
+}
+.event img {
+  width: 100%;
+  height: 200px;
+}
+.event i {
+  position: absolute;
+  bottom: 30px;
+  right:25px;
+  font-size: 1.5em;
+  color: #2948ff;
+  text-shadow: 2px 2px 1px #fff;
+}
+
+
+
+
+
+
+
+
+
+
