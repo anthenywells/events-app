@@ -25,13 +25,18 @@ body {
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  background-color:#2948ff;
+  background-color: transparent;
   padding: 10px;
+  z-index: 1;
+
 }
 #header a {
   color: #fff;
   padding:5px 15px;
   text-decoration: none;
+}
+#header :hover {
+  color: #ffcb05;
 }
 #logo{
   font-family: 'Bungee Inline',cursive;
@@ -42,6 +47,7 @@ body {
   margin-right: 20px;
   font-size: 1.2em;
 }
+
 /* search criteria */
 .search {
   margin-top: 100px;
@@ -49,7 +55,6 @@ body {
 .inputs {
   border: 1px solid #bbb;
 }
-
 ::placeholder {
   color: #aaa;
 }
@@ -78,12 +83,14 @@ body {
 .event {
   position: relative;
   width: 335px;
-  background-color: #fff;
+  background-color: #262626;
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
+  box-shadow: 2px 2px 10px #000000;
 }
 .details {
+  width: 300px;
   position: absolute;
   left:25px;
   color: #fff;
@@ -98,16 +105,19 @@ body {
   bottom: 30px;
   right:25px;
   font-size: 1.5em;
-  color: #2948ff;
-  text-shadow: 2px 2px 1px #fff;
+  color: #ffcb05;
 }
 
-
-
-
-
-
-
-
-
-
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .events {
+    justify-content: center;
+  }
+  .event {
+    max-width: 300px;
+    width: 90%;
+  }
+  .details {
+    width: 280px;
+  }
+}

@@ -24,6 +24,28 @@
     <ng-view></ng-view>
 
 
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- custom script -->
+    <script>
+      // nav transition
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 50) {
+      $('#header')
+        .css('background','#2948ff')
+      $('.resume')
+        .css('background','#262626');
+      } else {
+      $('#header')
+        .css('background','transparent');
+      $('.resume')
+        .css('background','#2948ff');
+      }
+    });
+    </script>
     <!-- angularjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
     <!-- angularjs route -->
