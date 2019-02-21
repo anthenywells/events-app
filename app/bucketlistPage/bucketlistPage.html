@@ -1,6 +1,5 @@
-<!-- <div class="nofavs" ng-if="{$ctrl.favorites: 0}">You have no favorites</div> -->
-
 <div class="events">
+
   <section ng-repeat="item in $ctrl.favorites" class="event">
     <div class="details">
       <p>{{item.name}}</p>
@@ -9,14 +8,23 @@
     <img src="{{item.images[7].url}}" width="400px">
     
     <div class="buttons">
-      <button class="btn" ng-click="$ctrl.toggle = item">Details</button>
-      <a ng-click="$ctrl.removeFavorite(post)">
-        <i class="far fa-star"></i>
-      </a>
-    </div>
+        <div class="detailbuttons">
+        <a class="btn" ng-click="$ctrl.toggle = item; showDiv=true;">
+          <i class="fas fa-angle-down" ng-hide="showDiv"></i>
+        </a>
+        <a class="close" ng-click="$ctrl.toggle = false; showDiv=false;">
+          <i class="fas fa-times" ng-hide="!showDiv"></i>
+        </a>
+      </div>
+      <div class="favbuttons">
+        <a ng-click="$ctrl.removeFavorite(item);">
+          <i class="fas fa-star"></i>
+        </a>
+      </div>
+      </div>
 
     <div class="animated bounceIn eventDetails" ng-class="{'hide' : $ctrl.toggle != item}">
-      <a ng-click="$ctrl.toggle = false"><p class="close">X</p></a>
+
       <p>Genre: {{item.classifications[0].genre.name}}</p>
       <p>{{item._embedded.venues[0].name}}</p>
       <p>Starting at: {{item.priceRanges[0].min | currency}}</p>
@@ -25,4 +33,5 @@
       
     </div>
   </section>
+  <div class="noshows" ng-show="{{favorites.length == 0}}"><p>sorry, no favs bro</p></div>
 </div>

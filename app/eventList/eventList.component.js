@@ -8,6 +8,9 @@ const eventList = {
     vm.saveFavorite = (index) => {
       EventService.setFavorite(index)
     }
+    vm.removeFavorite = (index) => {
+      EventService.deleteFavorite(index)
+    }
   }]
   
 };
