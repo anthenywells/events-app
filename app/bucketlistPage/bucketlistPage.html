@@ -10,9 +10,20 @@
       <p><a href="{{item.url}}">Get Your Tickets Now!</p>
     </div>
     <img src="{{item.images[7].url}}" width="400px">
-    <a ng-click="$ctrl.removeFavorite($index)">
-      <i class="far fa-star"></i>
-    </a>
+    
+    <div class="buttons">
+      <button class="btn" ng-click="$ctrl.toggle = !$ctrl.toggle">Details</button>
+      <a ng-click="$ctrl.saveFavorite(post)">
+        <i class="far fa-star"></i>
+      </a>
+    </div>
 
+    <div class="eventDetails" ng-class="{'hide' : $ctrl.toggle}">
+      <p>Genre: {{item.classifications[0].genre.name}}</p>
+      <p>{{item._embedded.venues[0].name}}</p>
+      <p>Starting at: {{item.priceRanges[0].min | currency}}</p>
+      <p>{{item.ticketLimit.info}}</p>
+      <a href="{{item.url}}">Get Your Tickets Now!</a>
+    </div>
   </section>
 </div>
