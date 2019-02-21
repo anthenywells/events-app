@@ -8,9 +8,8 @@ const bucketList = {
             EventService.deleteFavorite(index)
           }
         vm.favorites = EventService.getFavorite()
-        console.log(vm.favorites)
-
     }],
+
 
 }
 

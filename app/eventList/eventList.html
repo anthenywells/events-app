@@ -4,7 +4,7 @@
 
   <section ng-repeat="post in $ctrl.posts" class="event">
    <div class="details">
-    <p>{{ post.name}}</p>
+    <p>{{post.name}}</p>
     <p>{{post.dates.start.localDate}}</p>
    </div>
     <img src="{{post.images[7].url}}">
@@ -17,11 +17,15 @@
     </div>
     
     <div class="animated bounceIn eventDetails" ng-class="{'hide' : $ctrl.toggle != post}">
+      <a ng-click="$ctrl.toggle = false"><p class="close">X</p></a>
       <p>Genre: {{post.classifications[0].genre.name}}</p>
       <p>{{post._embedded.venues[0].name}}</p>
       <p>Starting at: {{post.priceRanges[0].min | currency}}</p>
       <p>{{post.ticketLimit.info}}</p>
       <a href="{{post.url}}">Get Your Tickets Now!</a>
     </div>
+
+
   </section>
+  <div class="noshows" ng-show="{{posts.length == 0}}"><p>sorry, no shows bro</p></div>
 </div>
