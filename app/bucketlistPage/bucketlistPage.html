@@ -9,18 +9,20 @@
     <img src="{{item.images[7].url}}" width="400px">
     
     <div class="buttons">
-      <button class="btn" ng-click="$ctrl.toggle = !$ctrl.toggle">Details</button>
-      <a ng-click="$ctrl.saveFavorite(post)">
+      <button class="btn" ng-click="$ctrl.toggle = item">Details</button>
+      <a ng-click="$ctrl.removeFavorite(post)">
         <i class="far fa-star"></i>
       </a>
     </div>
 
-    <div class="eventDetails" ng-class="{'hide' : $ctrl.toggle}">
+    <div class="animated bounceIn eventDetails" ng-class="{'hide' : $ctrl.toggle != item}">
+      <a ng-click="$ctrl.toggle = false"><p class="close">X</p></a>
       <p>Genre: {{item.classifications[0].genre.name}}</p>
       <p>{{item._embedded.venues[0].name}}</p>
       <p>Starting at: {{item.priceRanges[0].min | currency}}</p>
       <p>{{item.ticketLimit.info}}</p>
       <a href="{{item.url}}">Get Your Tickets Now!</a>
+      
     </div>
   </section>
 </div>
