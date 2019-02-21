@@ -7,16 +7,16 @@
     <p>{{ post.name}}</p>
     <p>{{post.dates.start.localDate}}</p>
    </div>
-    <img src="{{post.images[7].url}}" width="400px">
+    <img src="{{post.images[7].url}}">
 
     <div class="buttons">
-      <button class="btn" ng-click="$ctrl.toggle = !$ctrl.toggle">Details</button>
+      <button class="btn" ng-click="$ctrl.toggle = post">Details</button>
       <a ng-click="$ctrl.saveFavorite(post)">
         <i class="far fa-star"></i>
       </a>
     </div>
     
-    <div class="eventDetails" ng-class="{'hide' : $ctrl.toggle}">
+    <div class="animated bounceIn eventDetails" ng-class="{'hide' : $ctrl.toggle != post}">
       <p>Genre: {{post.classifications[0].genre.name}}</p>
       <p>{{post._embedded.venues[0].name}}</p>
       <p>Starting at: {{post.priceRanges[0].min | currency}}</p>

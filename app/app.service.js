@@ -20,6 +20,7 @@ function EventService($http, $location) {
     }).then((data) => {
       self.jsonPayload = data;
       $location.path("/event-list")
+      console.log(data)
       return self.jsonPayload;
 
     });
