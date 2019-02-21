@@ -4,10 +4,7 @@
   <section ng-repeat="item in $ctrl.favorites" class="event">
     <div class="details">
       <p>{{item.name}}</p>
-      <p>{{item.venue[0]}}</p>
       <p>{{item.dates.start.localDate}}</p>
-      <p>{{item.ticketLimit.info}}</p>
-      <p><a href="{{item.url}}">Get Your Tickets Now!</p>
     </div>
     <img src="{{item.images[7].url}}" width="400px">
     

@@ -108,6 +108,10 @@ body {
 .eventDetails {
   color: #ddd;
 }
+.eventDetails a {
+  text-decoration: none;
+  color: #ffcb05;
+}
 .event img {
   width: 100%;
   height: 200px;
@@ -120,16 +124,23 @@ body {
 }
 .btn {
   font-size: 1em;
-  color: #000;
-  background: #ffcb05;
+  color: #fff;
+  background: #2948ff;
   border-radius: 5px;
   border:none;
 }
+
+.btn:hover {
+  background-color: #ffcb05;
+  color:#000;
+}
 .event i {
   font-size: 1.5em;
+  color: #2948ff;
+}
+.event i:hover {
   color: #ffcb05;
 }
-
 .hide {
   display: none;
 }
