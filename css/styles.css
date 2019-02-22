@@ -11,7 +11,7 @@ body {
   background-image: 
   linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0, .5)),
   /* Photo by Edwin Andrade on Unsplash */
-  url("/assets/images/fans.jpg");
+  url("./assets/images/fans.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
