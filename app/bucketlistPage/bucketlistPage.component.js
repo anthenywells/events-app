@@ -1,6 +1,6 @@
 "use strict";
 const bucketList = {
-    templateUrl: "app/bucketListPage/bucketListPage.html",
+    templateUrl: "./app/bucketlistPage/bucketlistPage.html",
     controller: ["EventService", function(EventService) {
         const vm = this
         vm.toggle = true;
