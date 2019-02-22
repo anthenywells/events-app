@@ -1,7 +1,6 @@
 
 "use strict";
 function expand() {
-
     return {
         restrict: "A",
         link: function($scope, $element, $attrs) {

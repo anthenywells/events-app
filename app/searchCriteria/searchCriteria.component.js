@@ -1,6 +1,6 @@
 "use strict";
 const searchCriteria = {
-  templateUrl: "app/searchCriteria/searchCriteria.html",
+  templateUrl: "./app/searchCriteria/searchCriteria.html",
   controller: ["EventService", function(EventService) {
     const vm = this;
     vm.searchQuery = {
